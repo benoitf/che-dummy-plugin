@@ -13,6 +13,8 @@ if [ ! -f ../ui/hello_world_plugin.theia ]; then
 fi
 
 tar cvf che-dummy-plugin.tar -C ../ui hello_world_plugin.theia
-tar uvf che-dummy-plugin.tar etc
+cd etc
+tar uvf ../che-dummy-plugin.tar .
+cd ..
 gzip che-dummy-plugin.tar
 
